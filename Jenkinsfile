@@ -11,12 +11,9 @@ pipeline {
         sleep 5
       }
     }
-    stage('') {
+    stage('error') {
       steps {
-        timestamps() {
-          mail(subject: 'test pipeline', body: 'test', to: 'yude.li@accenture.com')
-        }
-
+        echo 'Finished'
       }
     }
   }
